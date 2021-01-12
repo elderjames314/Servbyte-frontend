@@ -1,0 +1,76 @@
+<div class="col-md-7 contact-para animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+  <h5>Register</h5>
+  <form #form=ngForm>
+    <div class="grid-contact">
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">First name </p>
+          <input type="text" name="firstname" [(ngModel)]="registerDetails.firstName" placeholder="First name" required>
+        </div>
+      <div class="col-md-6 contact-grid">
+      <p class="your-para">Last name</p>
+        <input type="text" name="lastName" [(ngModel)]="registerDetails.lastName" placeholder="Last name" required>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div class="grid-contact">
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">Email</p>
+        <input type="email" name="email" [(ngModel)]="registerDetails.email" placeholder="email" required>
+      </div>
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">Password</p>
+        <input type="Password" name="password" [(ngModel)]="registerDetails.password" placeholder="password" required>
+      </div>
+      <div class="clearfix"> </div>
+
+
+    </div>
+
+    <div class="grid-contact">
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">Phone Number</p>
+        <input type="text" name="phoneNumber" [(ngModel)]="registerDetails.phoneNumber" placeholder="phone number" required>
+      </div>
+      <div class="col-md-6 contact-grid">
+
+        <p class="your-para">City</p>
+        <select name="city" [(ngModel)]="registerDetails.city" class="form-control" required>
+          <option value="LAGOS">LAGOS</option>
+          <option value="ABUJA">ABUJA</option>
+          <option value="IBADAN">IBADAN</option>
+          <option value="UYO">UYO</option>
+          <option value="PORT HARCOURT">PORT HARCOURT</option>
+          <option value="ENUGU">ENUGU</option>
+          <option value="ASABA">ASABA</option>
+          <option value="KANO">KANO</option>
+          <option value="UMUAHIA">UMUAHIA</option>
+          <option value="ABA">ABA</option>
+          <option value="OWERRI">IBADAN</option>
+        </select>
+      </div>
+      <div class="clearfix"> </div>
+
+
+    </div>
+
+    <div class="grid-contact">
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">TYPE</p>
+        <select name="role" [(ngModel)]="registerDetails.role" class="form-control" required>
+          <option value="RESTAURANT">RESTAURANT</option>
+          <option value="LOGISTICS">LOGISTICS</option>
+          <option value="USER">USER</option>
+
+        </select>
+      </div>
+      <div class="col-md-6 contact-grid">
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+      <div class="send">
+        <input type="button" (click)="register()" class="btn btn-success" value="REGISTER" [disabled]="form.form.invalid">
+      </div>
+  </form>
+  </div>
+
+

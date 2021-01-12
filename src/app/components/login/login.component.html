@@ -1,0 +1,26 @@
+<div class="col-md-7 contact-para animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+  <h5>LOGIN</h5>
+  <form #form=ngForm>
+    <div class="grid-contact">
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">Email</p>
+        <input type="email" class="form-control" name="email" [(ngModel)]="loginDetails.email" placeholder="email" required>
+      </div>
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">Password</p>
+        <input type="Password" name="password" [(ngModel)]="loginDetails.password" placeholder="password" required>
+      </div>
+      <div class="clearfix"> </div>
+
+
+    </div>
+
+
+      <div class="send">
+        <input type="button" (click)="login()" class="btn btn-success" value="LOGIN" [disabled]="form.form.invalid">
+      </div>
+  </form>
+  </div>
+
+
+

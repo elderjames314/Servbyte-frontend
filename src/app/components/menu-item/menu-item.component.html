@@ -1,0 +1,26 @@
+<div class="header">
+	<div class="container">
+		<div class="logo animated wow pulse" data-wow-duration="1000ms" data-wow-delay="500ms">
+			<h1><a href="/"><span>C</span><img src="/assets/web/images/oo.png" alt=""><img src="/assets/web/images/oo.png" alt="">kery</a></h1>
+		</div>
+
+	<div class="clearfix"></div>
+	</div>
+	<!-- start search-->
+		<div class="banner">
+			<p class="animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">Online Food Delivery Service</p>
+			<label></label>
+      <h4 class="animated wow fadeInTop" data-wow-duration="1000ms" data-wow-delay="500ms">Hello And Welcome To Food</h4>
+      <br>
+      <br>
+      <div *ngIf="hasLoggedIn">
+        <h4 class="animated wow fadeInTop" data-wow-duration="1000ms" data-wow-delay="500ms">Welcome {{ getFullname() }}</h4> <br>
+        <button class="btn btn-lg btn-default" (click)="logout()" >Log out</button>
+      </div>
+      <div *ngIf="!hasLoggedIn">
+        <a routerLink="/register" class="btn btn-lg btn-danger">CREATE ACCOUNT</a> &nbsp; &nbsp;
+        <a routerLink="/login" class="btn btn-lg btn-danger" >Login</a>
+      </div>
+
+		</div>
+</div>
