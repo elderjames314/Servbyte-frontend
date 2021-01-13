@@ -1,3 +1,4 @@
+
 import { JwtServiceService } from './../../shared/jwt-service.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -26,15 +27,21 @@ export class LoginComponent implements OnInit {
     password: null,
   }
 
+  User = {
+    firstName:null,
+    lastName:null,
+    email:null,
+    phoneNumber:null
+  }
+
   login() {
-    console.log(this.loginDetails)
-    this.restApi.loginUser(this.loginDetails).subscribe((data: {})=>{
+    this.restApi.loginUser(this.loginDetails).subscribe(data=>{
       console.log(data)
       //save token
       this.jwtService.setToken(data.accessToken);
       this.jwtService.setParameters(data.firstName, data.lastName, data.email, data.phoneNumber);
 
-      this.router.navigate(['/menu', data.email])
+      this.router.navigate(['/menu', data.id])
     })
 
   }

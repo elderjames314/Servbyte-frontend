@@ -21,17 +21,19 @@ export class JwtServiceService {
     localStorage.removeItem("lastName");
     localStorage.removeItem("email");
     localStorage.removeItem("phoneNumber");
+    localStorage.removeItem("id")
     return 1;
   }
   get loggedIn(): boolean{
     return localStorage.getItem('token') !==  null;
 
   }
-  setParameters(firstName: string, lastName:string, email:string, phoneNumber:string) {
+  setParameters(firstName: string, lastName:string, email:string, phoneNumber:string, id:string) {
     localStorage.setItem('firstName', firstName);
     localStorage.setItem('lastName', lastName);
     localStorage.setItem('email', email)
     localStorage.setItem('phoneNumber', phoneNumber);
+    localStorage.setItem('id', id);
   }
 
   get getFullname(): any {

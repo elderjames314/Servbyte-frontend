@@ -1,1 +1,46 @@
-<p>menu works!</p>
+<div class="col-md-7 contact-para animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+  <h5>ADD MENUS</h5>
+  <form #form=ngForm>
+    <div class="grid-contact">
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">Name </p>
+          <input type="text" name="name" [(ngModel)]="MenuItem.name" placeholder="Name" required>
+        </div>
+      <div class="col-md-6 contact-grid">
+      <p class="your-para">Price</p>
+        <input type="text" name="price" [(ngModel)]="MenuItem.price" placeholder="Price" required>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div class="grid-contact">
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">Preparation time</p>
+        <input type="text" name="preparationTime" [(ngModel)]="MenuItem.preparationTime" placeholder="Preparation time" required>
+      </div>
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">Description</p>
+        <input type="Password" name="description" [(ngModel)]="MenuItem.description" placeholder="Description" required>
+      </div>
+      <div class="clearfix"> </div>
+
+
+    </div>
+
+    <div class="grid-contact">
+      <div class="col-md-6 contact-grid">
+        <p class="your-para">Upload photo</p>
+        <input type="file" name="picture" [(ngModel)]="MenuItem.picture" class="form-control" required>
+      </div>
+
+      <div class="clearfix"> </div>
+
+
+    </div>
+
+      <div class="send">
+        <input type="button" (click)="saveMenu()" class="btn btn-success" value="SAVE MENU" [disabled]="form.form.invalid">
+      </div>
+  </form>
+  </div>
+
+

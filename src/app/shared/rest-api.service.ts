@@ -49,6 +49,9 @@ export class RestApiService {
       )
     }
 
+    //HttpClient API POST method => save menu
+    
+
    // Error handling
   handleError(error: any) {
     let errorMessage = '';
@@ -59,7 +62,7 @@ export class RestApiService {
       // Get server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
-    //window.alert(errorMessage);
+    window.alert(errorMessage);
     console.log(errorMessage)
     return throwError(errorMessage);
  }
